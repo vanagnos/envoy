@@ -4,28 +4,8 @@ permissions:
   contents: read
 
 on:
-  workflow_call:
-    secrets:
-      dockerhub-username:
-        required: false
-      dockerhub-password:
-        required: false
-      gcs-cache-key:
-        required: true
-      gpg-key:
-        required: true
-      gpg-key-password:
-        required: true
-    inputs:
-      gcs-cache-bucket:
-        type: string
-        required: true
-      request:
-        type: string
-        required: true
-      trusted:
-        type: boolean
-        required: true
+  workflow_dispatch:
+
 
 concurrency:
   group: >-
