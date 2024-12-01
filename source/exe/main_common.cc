@@ -31,6 +31,7 @@
 namespace Envoy {
 
 StrippedMainBase::CreateInstanceFunction createFunction() {
+std::cout << "TEST HERE"  << "\n";
   return
       [](Init::Manager& init_manager, const Server::Options& options,
          Event::TimeSystem& time_system, ListenerHooks& hooks, Server::HotRestart& restarter,
